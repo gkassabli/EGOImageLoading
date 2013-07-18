@@ -44,6 +44,7 @@
 }
 
 - (void)setImageURL:(NSURL *)aURL {
+    [self setContentMode:UIViewContentModeScaleAspectFit];
 	if(imageURL) {
 		[[EGOImageLoader sharedImageLoader] removeObserver:self forURL:imageURL];
 		[imageURL release];
